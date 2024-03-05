@@ -1,0 +1,21 @@
+print(""" 
+Veuillez entrer les longueurs des 3 côtés 
+(Mettre des virgules entre chaque nombre) :""") 
+a, b, c = eval(input()) 
+
+if a < (b+c) and b < (a+c) and c < (a+b):
+    print("Ces 3 longueurs correspondent a un triangle")
+else:
+    print("Impossible de creer un triangle avec ces trois valeurs")
+
+    #pour un triangle equilateral ( meme longueur de chaque coté)
+
+if a==b and b==c:
+    print("Il s'agit d'un triangle equilateral")
+
+#pour un triangle isocele
+elif a == b or b == c or c == a : 
+    print("Il s'agit d'un triangle isocèle")
+    #pour un triangle rectangle
+if a*a + b*b == c*c or b*b + c*c == a*a or c*c + a*a == b*b :
+    print("il s'agit d'un triangle rectangle")
